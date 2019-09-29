@@ -218,7 +218,7 @@ select {
 }
 
 .form {
-  /* position: relative; */
+  
   max-width: 550px;
   top: 50%;
   transform: translateY(-50%);
@@ -289,7 +289,6 @@ select {
 <script>
 import { ValidationObserver, ValidationProvider } from "vee-validate";
 
-
 export default {
   components: {
     ValidationObserver,
@@ -333,25 +332,6 @@ export default {
       }
     }
 
-    // Check:function(){
-    //   const isValid=await this.$validator.validateAll()
-    //   if (isValid){
-    //     this.$http
-    //       .post("http://jsonplaceholder.typicode.com/posts", {
-    //         FirstName: this.FirstName,
-    //         LastName: this.LastName,
-    //         Gender: this.Gender,
-    //         Email: this.Email,
-    //         Tel: this.Tel,
-    //         BirthdayDate: this.FirstNBirthdayDateame,
-    //         Password: this.Password,
-    //         RePassword: this.RePassword
-    //       })
-    //       .then(function(data) {
-    //         console.log(data);
-    //       });
-    //   }
-    // }
   }
 };
 </script>
