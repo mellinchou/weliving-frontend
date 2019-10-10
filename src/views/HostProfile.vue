@@ -1,36 +1,53 @@
 <template>
   <div>
-    <img src="cute.jpg" class="ProfilePerson" alt="Person Picture" />
-    <!-- <img v-bind:src="cute.jpg" alt="Person Picture" class="ProfilePerson" /> -->
-    <div>
+    <div class="background">
+      <img src="cute.jpg" class="ProfilePerson" alt="Person Picture" />
+      <main>
+        <div class="btn">
+          <button class="Profile" id="Profile">Profile</button>
+        </div>
+        <div class="btn">
+          <button class="Host" id="Host">Host</button>
+        </div>
+      </main>
       <table>
         <tr>
-          <td>Basic Information</td>
-          <td>Personal Information</td>
+          <div class="title">
+            <span>House Information</span>
+          </div>
         </tr>
         <tr>
-          <td>Name</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Email</td>
+          <td>Title</td>
           <td></td>
         </tr>
         <tr>
-          <td>Birthday</td>
+          <td>Theme</td>
           <td></td>
         </tr>
         <tr>
-          <td>Phone number</td>
+          <td>Team</td>
           <td></td>
         </tr>
         <tr>
-          <td></td>
+          <td>Room</td>
           <td></td>
         </tr>
-        <button class="Profile" id="Profile">Profile</button>
-        <button class="Host" id="Host">Host</button>
+        <tr>
+          <td>Location</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Info</td>
+          <td></td>
+        </tr>
       </table>
+      <div class="title">
+        <span>Pictures of the House</span>
+        <div class="picture"></div>
+      </div>
+      <div class="btn">
+        <button class="Edit" id="Edit">Edit profile</button>
+      </div>
     </div>
   </div>
 </template>
@@ -50,23 +67,19 @@
   width: 150px;
   height: 40px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 1);
   font-size: 16px;
   margin-left: 25px;
   margin-right: 25px;
 }
 
 .background {
-  padding-top: 50px;
-  background-image: url(personfileBackground2.jpg);
-  /* width: 1500px;
-            height: 1200px; */
-  /* opacity: 0.85; */
-  /* filter: alpha(opacity=50); */
+  padding-top: 20px;
+  background-image: url(bridge1.jpg);
   box-shadow: 25px 25px 50px white inset, -25px -25px 50px white inset;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 25px 120px;
 }
 
 .Edit {
@@ -93,12 +106,10 @@ main > .btn {
 }
 
 .title {
-  margin: 15px;
-  padding-top: 25px;
+  margin-top: 25px;
   font-size: 30px;
   font-style: oblique;
-  font-weight: bold;
-  margin-left: 22%;
+  margin-left: 24%;
 }
 
 .text {
@@ -106,18 +117,16 @@ main > .btn {
 }
 
 table {
-  width: 900px;
+  width: 800px;
   border-collapse: collapse;
-  padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
 }
 
 td {
-  width: 250px;
   height: 50px;
   white-space: pre-line;
-  border-bottom: 0.1px solid grey;
+  border-bottom: 1px solid #dddddd;
   margin: auto;
   /* font-family:sans-serif; */
   font-size: 25px;
@@ -127,6 +136,11 @@ td {
   padding-right: 30px;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+.picture {
+  width: 500px;
+  height: 500px;
+  color: blue;
 }
 
 .ProfilePerson {
