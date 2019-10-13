@@ -5,6 +5,7 @@ import Signup from './views/Signup.vue'
 import Login from './views/Login.vue'
 import SearchResult from './views/SearchResult.vue'
 import HouseProfile from './views/HouseProfile.vue'
+import PersonalProfile from './views/PersonalProfile.vue'
 
 Vue.use(VueRouter)
 export default new VueRouter({
@@ -34,6 +35,12 @@ export default new VueRouter({
       path:'/houseprofile/:id',
       name:'houseprofile',
       component:HouseProfile,
+      props:true
+    },
+    {
+      path:'/personalprofile',
+      name:'personalprofile',
+      component:PersonalProfile,
       props:true
     },
   ]   

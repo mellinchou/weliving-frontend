@@ -4,11 +4,13 @@
         <div class="container whiteForm">
             <h2>Login</h2>
       <hr/>
-      
-      <input type="text" id="account" placeholder="Email or Phone" v-model="email"/>
-      <br />
-      <input type="password" id="password" placeholder="Password" v-model="password"/><br>
-      <router-link to="/"><button class="button loginButton" v-on:click="login">登入</button></router-link>
+      <form action="#" @submit.prevent="login">
+        <input type="text" id="account" placeholder="Email" v-model="email"/>
+        <br />
+        <input type="password" id="password" placeholder="Password" v-model="password"/><br>
+        <button class="button loginButton" type="submit">Login</button>
+        <!-- <router-link to="/"><button class="button loginButton" v-on:click="login">登入</button></router-link> -->
+      </form>
       <div class="hr-sect">or</div>
       <GoogleButton/><br>
       <FacebookButton/>
@@ -35,15 +37,21 @@ export default {
     };
   },
     methods:{
+      // login:function(){
+      //   this.$http
+      //     .post("http://3.227.148.97:3000/member/login", {
+      //       email:this.email,
+      //       password:this.password
+      //     })
+      //     .then(function(data) {
+      //       alert("Login Success");
+      //     });
+      // }
       login:function(){
-        this.$http
-          .post("http://3.227.148.97:3000/member/login", {
-            email:this.email,
-            password:this.password
-          })
-          .then(function(data) {
-            alert("Login Success");
-          });
+        this.$store.dispatch('retriveToken',{
+          email:this.email,
+          password:this.password
+        })
       }
     }
 }
